@@ -1,0 +1,7 @@
+{
+  "name": "proiectowe",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
