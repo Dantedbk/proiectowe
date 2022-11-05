@@ -1,0 +1,39 @@
+
+
+<ion-content >
+
+
+  <ion-card style="padding-top:15%;align-items: center;">
+    <ion-card-header>
+      <img src="assets/aaa.png" style="width: 75%;margin: auto; display: block" >
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-item> 
+        <ion-input [(ngModel)]="usuario" placeholder="usuario" type="text" value=""> </ion-input>
+      </ion-item>
+      <ion-item> 
+        <ion-input [(ngModel)]="contrasena" placeholder="contraseña" type="password" value=""> </ion-input>
+      </ion-item>
+
+
+    </ion-card-content>
+
+    <div class="row" style="text-align: center;padding-bottom: 10px;margin-left: 20px;">
+
+
+      <ion-button class="btnhover"   (click)="volverHome()">Volver </ion-button>
+      <ion-button class="btnhover" (click)="ingresar()">Login </ion-button>
+    </div>
+    <ion-item > 
+      <ion-label>
+        <b>Modo:&nbsp;</b><span id="perfil"> Alumno <br></span>
+      </ion-label>
+      <ion-toggle  slot="end" [(ngModel)]="status" (ionChange)="cambiar()"  ></ion-toggle>
+    </ion-item>
+    <p style="text-align: center;color:cornflowerblue;font-weight: 700;" (click)="goToRegistro()">Registrarse</p>
+    <p style="text-align: center;color:cornflowerblue" (click)="recuperar()">Recuperar contraseña</p>
+    
+  </ion-card>
+
+</ion-content>
