@@ -27,6 +27,10 @@ const routes: Routes = [
     path: 'recover',
     loadChildren: () => import('./pages/recover/recover.module').then( m => m.RecoverPageModule)
   },
+  {
+    path: 'dprofile/:id',
+    loadChildren: () => import('./pages/dprofile/dprofile.module').then( m => m.DprofilePageModule)
+  },
 ];
 
 @NgModule({
