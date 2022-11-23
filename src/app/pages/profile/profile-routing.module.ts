@@ -8,6 +8,10 @@ const routes: Routes = [
     path: '',
     component: ProfilePage
   }
+  //   {
+  //   path: 'profile/:id',
+  //   loadChildren: () => import('./profile.module').then( m => m.ProfilePageModule)
+  // },
 ];
 
 @NgModule({
