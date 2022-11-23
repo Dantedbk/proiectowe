@@ -1,8 +1,7 @@
 
 
-<ion-content >
-
-
+<ion-content>
+  
   <ion-card style="padding-top:15%;align-items: center;">
     <ion-card-header>
       <img src="assets/aaa.png" style="width: 75%;margin: auto; display: block" >
@@ -29,7 +28,7 @@
       <ion-label>
         <b>Modo:&nbsp;</b><span id="perfil"> Alumno <br></span>
       </ion-label>
-      <ion-toggle  slot="end" [(ngModel)]="status" (ionChange)="cambiar()"  ></ion-toggle>
+      <ion-toggle id="wea" slot="end" [(ngModel)]="status"  [checked]="status" (ionChange)="cambiar()"  ></ion-toggle>
     </ion-item>
     <p style="text-align: center;color:cornflowerblue;font-weight: 700;" (click)="goToRegistro()">Registrarse</p>
     <p style="text-align: center;color:cornflowerblue" (click)="recuperar()">Recuperar contraseña</p>

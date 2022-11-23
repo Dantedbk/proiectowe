@@ -9,6 +9,7 @@ import { ApiService } from 'src/app/services/api.service';
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
 })
+
 export class LoginPage implements OnInit {
 
 
@@ -95,7 +96,15 @@ export class LoginPage implements OnInit {
     {
       localStorage.setItem('usuario',this.usuario.toString());
       this.storage.agregar('id', this.lista['id']);
-      this.router.navigate(['/profile', this.lista['id']]);
+
+// asd
+      if (!this.status){
+        this.router.navigate(['/profile', this.lista['id']]);
+      }
+      else {
+        this.router.navigate(['/dprofile', this.lista['id']]);
+      }
+
       this.mensaje = '';
     }
 }
