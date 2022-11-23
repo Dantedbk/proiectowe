@@ -9,8 +9,13 @@ export class DprofilePage implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-      document.getElementById("wea").innerHTML = localStorage.getItem('usuario')
+  async ngOnInit() {
+    document.getElementById("wea").innerHTML = localStorage.getItem('usuario')
+    console.log('aaazxcaa')
   }
+
+  nombre:string = localStorage.getItem('usuario')
+
+
 
 }

@@ -40,13 +40,16 @@ cancel() {
 }
 
 ngOnInit() {
-  document.getElementById("wea").innerHTML = localStorage.getItem('usuario')
   this.ide = this.route.snapshot.paramMap.get('id');
   this.api.getPosts(this.ide);
   this.lista = this.api.listado;
   console.log(this.ide);
   console.log(this.lista);
 }
+
+nombre:string = localStorage.getItem('usuario')
+
+
 confirm() {
   this.modal.dismiss(this.name, 'confirm');
 }
@@ -57,6 +60,7 @@ onWillDismiss(event: Event) {
     this.message = `Hello, ${ev.detail.data}!`;
   }
 }
+
 
 
 volverHome() {

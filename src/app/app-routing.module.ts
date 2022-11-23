@@ -17,7 +17,10 @@ const routes: Routes = [
   },
   {
     path: 'profile/:id',
-    loadChildren: () => import('./pages/profile/profile.module').then( m => m.ProfilePageModule)
+    loadChildren: () => import('./pages/profile/profile.module').then( m => m.ProfilePageModule),
+    data: {
+      preload: true
+    },
   },
   {
     path: 'registro',
@@ -29,7 +32,10 @@ const routes: Routes = [
   },
   {
     path: 'dprofile/:id',
-    loadChildren: () => import('./pages/dprofile/dprofile.module').then( m => m.DprofilePageModule)
+    loadChildren: () => import('./pages/dprofile/dprofile.module').then( m => m.DprofilePageModule),
+    data: {
+      preload: true
+    },
   },
 ];
 
