@@ -1,5 +1,5 @@
 <ion-header style="background-color:#071f35;color:rgb(255, 255, 255)">
-  <h4 style="text-align: center;padding-top:10px">Bienvenid@<br> <b>{{nombre}}</b> </h4>
+  <h4 style="text-align: center;padding-top:10px">Bienvenid@<br> <b style="color:#e4c132">{{nombre}}</b> </h4>
 
 <script nomodule="" src="https://unpkg.com/@ionic/pwa-elements@1.3.0/dist/ionicpwaelements/ionicpwaelements.js"></script>
 </ion-header>
@@ -8,8 +8,66 @@
 <ion-content class="ion-padding" >
   <img src="assets/profile.png" alt="" style="padding:40px;border-radius: 100%;"> 
   <div class="row" style="text-align: center;padding-bottom: 20px;padding-top: 40px"> 
-    <ion-button class="btnhover" >Generar QR </ion-button>
+    <ion-button class="btnhover" id="open-modal" >Generar QR </ion-button>
   </div>
+  <div class="row" style="text-align: center;padding-bottom: 20px;padding-top: 10px"> 
+    <ion-button class="btnhover" (click)="volverHome()">Volver </ion-button>
+  </div>
+  
+  <ion-modal trigger="open-modal" (willDismiss)="onWillDismiss($event)">
+    <ng-template >
+      <ion-header >
+        <ion-toolbar >
+          <h3  style="text-align: center;color:#ffffff">Clase:<br> <b style="color:#e4c132" >wea123</b> </h3>
+          <!-- <ion-title  style="color:#e4c132;font-weight: 1000;">Clase: Inglés</ion-title> -->
+          <ion-buttons slot="end">
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-content class="ion-padding " >  
+        <ion-item class="ion-justify-content-between ion-align-items-center " style="margin-top: 90px;margin-left:8px">
+          <qrcode 
+          [qrdata]="angularQrCode" 
+          [allowEmptyString]="true"
+          [cssClass]="'center'"
+          [colorDark]="'#e4c132'"
+          [colorLight]="'#071f35'"
+          [elementType]="'canvas'"
+          [errorCorrectionLevel]="'M'"
+          [imageSrc]="'./assets/angular-logo.png'"
+          [imageHeight]="50"
+          [imageWidth]="50"
+          [margin]="4"
+          [title]="'A custom title attribute'"
+          [width]="200"
+    
+          ></qrcode>
+        </ion-item>
+      </ion-content>
+      <ion-button style="height:10%;color:aliceblue;font-size:20px;filter: drop-shadow(16px 16px 20px rgba(0, 132, 255, 0.407))" 
+      (click)="confirm()" class="btnhover" id="open-modal" >Registrar</ion-button>
+    </ng-template>
+  </ion-modal>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </ion-content>
 
 

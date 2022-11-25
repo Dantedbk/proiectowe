@@ -39,8 +39,6 @@ export class LoginPage implements OnInit {
     this.storage.init();
   }
 
-
-
   volverHome() {
     this.router.navigate(["./home"])
   }
@@ -56,16 +54,20 @@ export class LoginPage implements OnInit {
   cambiar() {
     if (this.status) {
       document.getElementById("perfil").innerHTML = "Docente ";
+      this.api.getProfesores();
+      this.lista = this.api.listado;
     }
     else {
       document.getElementById("perfil").innerHTML = "Alumno ";
+      this.api.getUsers();
+      this.lista = this.api.listado;
 
     }
   }
 
   async ingresar (){
 
-    this.lista = this.api.listado.find(({username}) => username === this.usuario);
+    this.lista = this.api.listado.find(({usuario}) => usuario === this.usuario);
     if(this.usuario == null || "")
     {
       const toast = await this.toastController.create({
@@ -84,7 +86,7 @@ export class LoginPage implements OnInit {
     })
     toast.present();
     }
-    else if (this.contrasena !=  "1234")
+    else if (this.contrasena !=  this.lista['pass'] && this.status)
     {
       const toast = await this.toastController.create({
         message : "contraseña invalida",

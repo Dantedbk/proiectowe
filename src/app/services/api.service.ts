@@ -8,14 +8,32 @@ import { Injectable } from '@angular/core';
 export class ApiService {
   listado = [];
   item : any;
-  private urlBaseApi = 'https://jsonplaceholder.typicode.com/';
+  private urlBaseApi = 'http://localhost:3000/';
   constructor(
     private httpClient: HttpClient) { 
     }
 
   getUsers()
   {
-    let url = this.urlBaseApi + 'users/';
+    let url = this.urlBaseApi + 'estudiante/';
+    this.listado = [];
+    return new Promise((resolve, rejects) => 
+    {
+      this.httpClient.get(url).subscribe((data:[]) =>
+      {
+        resolve(data);
+        data.forEach(item => { this.listado.push(item); })
+      },
+      error =>
+      {
+        console.log("Error en el servidor")
+      })
+    });
+  }
+
+  getProfesores()
+  {
+    let url = this.urlBaseApi + 'profesor/';
     this.listado = [];
     return new Promise((resolve, rejects) => 
     {
@@ -32,7 +50,7 @@ export class ApiService {
   }
 
   getPosts(id: String){
-    let url = this.urlBaseApi + 'posts/';
+    let url = this.urlBaseApi + 'profesor/';
     this.listado = [];
     return new Promise((resolve, rejects) => 
     {
@@ -40,7 +58,7 @@ export class ApiService {
       {
         resolve(data);
         data.forEach(item => { 
-          if(item['userId'] == id)
+          if(item['id'] == id)
           {
             this.listado.push(item); 
           }
@@ -54,7 +72,7 @@ export class ApiService {
   }
 
   getComments(id: String){
-    let url = this.urlBaseApi + 'posts/' + id + '/comments/';
+    let url = this.urlBaseApi + 'asignatura/';
     this.listado = [];
     return new Promise((resolve, rejects) => 
     {
@@ -62,7 +80,7 @@ export class ApiService {
       {
         resolve(data);
         data.forEach(item => { 
-          if(item['postId'] == id)
+          if(item['id'] == id)
           {
             this.listado.push(item); 
           }

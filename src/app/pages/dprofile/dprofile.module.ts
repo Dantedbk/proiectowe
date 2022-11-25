@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-
+import { QRCodeModule } from 'angularx-qrcode';
 import { IonicModule } from '@ionic/angular';
 
 import { DprofilePageRoutingModule } from './dprofile-routing.module';
@@ -13,7 +13,8 @@ import { DprofilePage } from './dprofile.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    DprofilePageRoutingModule
+    DprofilePageRoutingModule,
+    QRCodeModule
   ],
   declarations: [DprofilePage]
 })

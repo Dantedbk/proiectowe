@@ -1,0 +1,41 @@
+{
+  "estudiante": [
+    {
+      "id": "1","nombre": "juan juanjuan","usuario": "juan123","pass": "1234","email": "juanpe@gmail.com"
+    },
+    {
+      "id": "2","nombre": "pedro diaz","usuario": "pedro123","pass": "1234","email": "pediaz@gmail.com"
+    },
+    {
+      "id": "3","nombre": "ana rojas","usuario": "anarojas","pass": "1122","email": "aroja@gmail.com"
+    },
+    {
+      "id": "4","nombre": "maria palta","usuario": "palta","pass": "palta","email": "maripal@gmail.com"
+    }
+  ],
+  "profesor": [
+    {
+      "id": "1", "nombre": "pedro arbol","usuario": "hojas123","pass": "yerba","email": "elarbol@gmail.com"
+    },
+    {
+      "id": "2","nombre": "manuel mano","usuario": "manuma","pass": "fapfap","email": "manumano@gmail.com"
+    },
+    {
+      "id": "3","nombre": "antonia juan", "usuario": "juantonia","pass": "112233","email": "lejuan@gmail.com"
+    }
+  ],
+  "asignatura": [
+    {
+      "id": "1","nombre": "progra we","totalClases": 55
+    },
+    {
+      "id": "2","nombre": "baseedatos","totalClases": 50
+    },
+    {
+      "id": "3","nombre": "prograbasedatos","totalClases": 40
+    },
+    {
+      "id": "4","nombre": "1313","totalClases": 10
+    }
+  ]
+}

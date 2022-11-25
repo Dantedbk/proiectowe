@@ -1,0 +1,23 @@
+ion-modal {
+    --ion-background-color: #071f35;;
+    --ion-border-color:rgba(255, 0, 0, 0);
+    --ion-backdrop-color:rgb(255, 217, 0);
+    --ion-toolbar-background:#071f35;
+    --ion-toolbar-border-color:rgba(200, 164, 164, 0);
+  }
+
+
+  /* Put this code in your CSS file */
+
+/* The div container */
+.qrcodeImage {
+  display: flex;
+  flex: 1;
+}
+
+/* Add custom styles here */
+.center {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
