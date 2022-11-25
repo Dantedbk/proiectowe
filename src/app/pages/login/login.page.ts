@@ -97,6 +97,7 @@ export class LoginPage implements OnInit {
     else 
     {
       localStorage.setItem('usuario',this.usuario.toString());
+      localStorage.setItem('weon',JSON.stringify(this.lista));
       this.storage.agregar('id', this.lista['id']);
 
 // asd

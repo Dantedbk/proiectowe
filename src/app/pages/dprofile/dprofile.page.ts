@@ -3,6 +3,7 @@ import { IonModal } from '@ionic/angular';
 import { OverlayEventDetail } from '@ionic/core/components';
 import jsQR from 'jsqr';
 import { Router } from '@angular/router';
+import { ApiService } from 'src/app/services/api.service';
 
 
 @Component({
@@ -13,21 +14,27 @@ import { Router } from '@angular/router';
 export class DprofilePage implements OnInit {
   @ViewChild(IonModal) modal: IonModal;
 
-  message = 'This modal example uses triggers to automatically open a modal when the button is clicked.';
+  message = 'c:';
   name: string;
+  lista:any;
+  ide:string;
   
   public angularQrCode: string = '';
-  constructor( private router: Router) { 
-    
+  route: any;
+  constructor( 
+    private router: Router,
+    private api : ApiService,) { 
+
   this.angularQrCode = "'https://github.com/Cordobo/angularx-qrcode'"
   }
 
   async ngOnInit() {
     document.getElementById("wea").innerHTML = localStorage.getItem('usuario')
-    console.log('aaazxcaa')
+    this.api.getAsignaturas();
+    this.lista = this.api.listado;
   }
 
-  nombre:string = localStorage.getItem('usuario')
+  nombre:any = JSON.parse(localStorage.getItem('weon'));
 
   cancel() {
     this.modal.dismiss(null, 'cancel');

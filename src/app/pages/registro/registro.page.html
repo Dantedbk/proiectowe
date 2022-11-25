@@ -6,4 +6,29 @@
 
 <ion-content>
 
+
+  <ion-card-content>
+    <ion-item> 
+      <ion-input [(ngModel)]="usuario" placeholder="nombre de usuario" type="text" value=""> </ion-input>
+    </ion-item>
+    <ion-item> 
+      <ion-input [(ngModel)]="rut" placeholder="rut" type="number" value=""> </ion-input>
+
+    <ion-input [(ngModel)]="dv" placeholder="dv" type="text" value=""> </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input [(ngModel)]="contrasena" style="position:absolute;" placeholder="contraseña" type="password" value=""> </ion-input>
+    </ion-item>
+    <ion-item> 
+      <ion-input [(ngModel)]="contrasena2" placeholder="repetir contraseña" type="password" value=""> </ion-input>
+    </ion-item>
+    <ion-item> 
+      <ion-input [(ngModel)]="correo" placeholder="correo electronico" type="text" value=""> </ion-input>
+    </ion-item>
+  </ion-card-content>
+  <div class="row " style="text-align: center;padding-bottom: 20px;">
+    <ion-button class="btnhover" (click)="Crear()">Aceptar</ion-button>
+    <ion-button class="btnhover" (click)="volverLogin()" >Volver</ion-button>
+  </div>
+
 </ion-content>

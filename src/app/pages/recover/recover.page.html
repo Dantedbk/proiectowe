@@ -1,9 +1,31 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>recover</ion-title>
+    <h4 style="text-align: center;padding-top:10px">Recuperar </h4>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
+  <ion-card>
+    <ion-card-header>
+      <img src="assets/aaa.png" alt="" style="width: auto;margin: auto; display: block;">
+    </ion-card-header>
+  
+    <ion-card-content>
+
+      <ion-item> 
+        <ion-input placeholder="Correo Electrónico:" type="text" [(ngModel)]="correo" value=""> </ion-input>
+      </ion-item>
+    </ion-card-content>
+
+    <div class="row " style="text-align: center;padding-bottom: 20px;">
+      <br>
+      <ion-button style="width:90%" class="btnhover" (click)="recuperar()" >Recuperar contraseña </ion-button>
+      <br>
+      <br>
+      <ion-button class="btnhover" (click)="volverLogin()">Volver </ion-button>
+    </div>
+    
+  </ion-card>
 
 </ion-content>

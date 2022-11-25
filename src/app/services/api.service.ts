@@ -48,6 +48,23 @@ export class ApiService {
       })
     });
   }
+  getAsignaturas()
+  {
+    let url = this.urlBaseApi + 'asignatura/';
+    this.listado = [];
+    return new Promise((resolve, rejects) => 
+    {
+      this.httpClient.get(url).subscribe((data:[]) =>
+      {
+        resolve(data);
+        data.forEach(item => { this.listado.push(item); })
+      },
+      error =>
+      {
+        console.log("Error en el servidor")
+      })
+    });
+  }
 
   getPosts(id: String){
     let url = this.urlBaseApi + 'profesor/';
