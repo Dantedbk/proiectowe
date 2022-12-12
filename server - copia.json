@@ -1,7 +1,11 @@
 {
   "estudiante": [
     {
-      "id": "1","nombre": "juan juanjuan","usuario": "juan123","pass": "1234","email": "juanpe@gmail.com"
+      "id": "1",
+      "nombre": "juan juanjuan",
+      "usuario": "juan123",
+      "pass": "1234",
+      "email": "juanpe@gmail.com"
     },
     {
       "id": "2","nombre": "pedro diaz","usuario": "pedro123","pass": "1234","email": "pediaz@gmail.com"

@@ -67,7 +67,7 @@ export class LoginPage implements OnInit {
 
   async ingresar (){
 
-    this.lista = this.api.listado.find(({usuario}) => usuario === this.usuario);
+    this.lista = this.api.listado.find(({usuario}) => usuario == this.usuario);
     if(this.usuario == null || "")
     {
       const toast = await this.toastController.create({
