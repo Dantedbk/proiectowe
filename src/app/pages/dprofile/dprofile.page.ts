@@ -18,6 +18,7 @@ export class DprofilePage implements OnInit {
   name: string;
   lista:any;
   ide:string;
+  urlwea: string;
   
   public angularQrCode: string = '';
   route: any;
@@ -25,7 +26,7 @@ export class DprofilePage implements OnInit {
     private router: Router,
     private api : ApiService,) { 
 
-  this.angularQrCode = "'https://github.com/Cordobo/angularx-qrcode'"
+  this.urlwea = "'https://morioh.com/p/daae448bccb6'"
   }
 
   async ngOnInit() {
