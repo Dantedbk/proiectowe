@@ -2,31 +2,55 @@
   "estudiante": [
     {
       "id": "1",
-      "nombre": "juan juanjuan",
+      "nombre": "juan perez",
       "usuario": "juan123",
       "pass": "1234",
-      "email": "juanpe@gmail.com"
+      "email": "juanpe@gmail.com",
+      "asistencia": [{
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      }]
     },
     {
       "id": "2",
       "nombre": "pedro diaz",
       "usuario": "pedro123",
       "pass": "1234",
-      "email": "pediaz@gmail.com"
+      "email": "pediaz@gmail.com",
+      "asistencia": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      }
     },
     {
       "id": "3",
       "nombre": "ana rojas",
       "usuario": "anarojas",
       "pass": "1122",
-      "email": "aroja@gmail.com"
+      "email": "aroja@gmail.com",
+      "asistencia": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      }
     },
     {
       "id": "4",
       "nombre": "maria palta",
       "usuario": "palta",
       "pass": "palta",
-      "email": "maripal@gmail.com"
+      "email": "maripal@gmail.com",
+      "asistencia": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      }
     }
   ],
   "profesor": [
@@ -35,102 +59,29 @@
       "nombre": "pedro arbol",
       "usuario": "hojas123",
       "pass": "yerba",
-      "email": "elarbol@gmail.com",
-      "ramos": [
-        {
-          "id": "3",
-          "nombre": "ingles",
-          "totalClases": 1000
-        },
-        {
-          "id": "4",
-          "nombre": "etica",
-          "totalClases": 10
-        }
-      ]
+      "email": "elarbol@gmail.com"
     },
     {
       "id": "2",
-      "nombre": "juan andres",
-      "usuario": "juandres",
-      "pass": "aaa123",
-      "email": "aaaaa123@gmail.com",
-      "ramos": [
-        {
-          "id": "3",
-          "nombre": "ingles",
-          "totalClases": 1000
-        }
-      ]
+      "nombre": "manuel mano",
+      "usuario": "elpaja",
+      "pass": "derecha",
+      "email": "1313@gmail.com"
     },
     {
       "id": "3",
       "nombre": "antonia juan",
       "usuario": "juantonia",
       "pass": "112233",
-      "email": "lejuan@gmail.com",
-      "ramos": [
-        {
-          "id": "0",
-          "nombre": "progra we",
-          "totalClases": 55
-        },
-        {
-          "id": "4",
-          "nombre": "etica",
-          "totalClases": 10
-        }
-      ]
-    },
-    {
-      "id": "4",
-      "nombre": "anacleto",
-      "usuario": "anacleto",
-      "pass": "anacle123",
-      "email": "elanacle@gmail.com",
-      "ramos": [
-        {
-          "id": "0",
-          "nombre": "progra we",
-          "totalClases": 55
-        },
-        {
-          "id": "3",
-          "nombre": "ingles",
-          "totalClases": 1000
-        }
-      ]
-    },
-    {
-      "id": "5",
-      "nombre": "aaa",
-      "usuario": "aaa",
-      "pass": "aaa",
-      "email": "elanacle@gmail.com",
-      "ramos": [
-        {
-          "id": "0",
-          "nombre": "progra we",
-          "totalClases": 55
-        },
-        {
-          "id": "1",
-          "nombre": "baseedatos",
-          "totalClases": 50
-        },
-        {
-          "id": "2",
-          "nombre": "prograbasedatos",
-          "totalClases": 40
-        }
-      ]
+      "email": "lejuan@gmail.com"
     }
   ],
-  "curso": {
-    "id_curso": 1,
-    "ramo": "progra we",
-    "nombre_estudiante": "pedro diaz",
-    "asistencia": 12,
-    "total_clases": 55
-  }
+  "asignatura": [
+    {
+      "id": "1",
+      "nombre": "progra we",
+      "totalClases": 55
+    }
+    
+  ]
 }

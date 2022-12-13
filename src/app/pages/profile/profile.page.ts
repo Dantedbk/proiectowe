@@ -30,6 +30,7 @@ ide : String;
 photo: any
 image : SafeResourceUrl;
 lista = []
+asistencia: number
 
 constructor(
   private route : ActivatedRoute,
@@ -48,7 +49,7 @@ constructor(
 
   }
 
-message = 'This modal example uses triggers to automatically open a modal when the button is clicked.';
+message = ' ';
 name: string;
 
 cancel() {
@@ -77,7 +78,10 @@ onWillDismiss(event: Event) {
   }
 }
 
-
+sumarAsistencia(asistencia: number){
+  this.asistencia += 1
+  return this.asistencia
+}
 
 volverHome() {
   this.router.navigate(["./home"])
@@ -152,7 +156,7 @@ async scan(){
       this.scanActive = false;
       this.scanResult = code.data;
       this.showQrToast();
-      // alert(code.data.)
+      alert("zi")
     }else{
       if(this.scanActive){
       requestAnimationFrame(this.scan.bind(this));
@@ -168,6 +172,10 @@ reset(){
 stopscan(){
   this.scanActive = false;
 }
+
+
+
+
 async showQrToast(){
   const toast = await this.toastCtrl.create({
 message: `Open ${this.scanResult}?`,
@@ -181,6 +189,13 @@ buttons:[{
   });
   toast.present();
 }
+
+
+
+
+
+
+
 }
 
 

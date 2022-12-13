@@ -18,7 +18,10 @@ describe('ProfilePage', () => {
     fixture.detectChanges();
   }));
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+  it('sumó asistencia?', () => {
+    expect(component.asistencia >= 0) ? true : false
+  })
+  // it('should create', () => {
+  //   expect(component).toBeTruthy();
+  // });
 });

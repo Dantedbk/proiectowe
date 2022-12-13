@@ -38,6 +38,10 @@ export class LoginPage implements OnInit {
     console.log(this.lista);
     this.storage.init();
   }
+  
+  getLista(){
+    return this.lista
+  }
 
   volverHome() {
     this.router.navigate(["./home"])
